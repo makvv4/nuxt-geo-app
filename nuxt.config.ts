@@ -1,4 +1,6 @@
 import tailwindcss from '@tailwindcss/vite'
+import browserslist from 'browserslist'
+import { browserslistToTargets } from 'lightningcss'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
@@ -26,6 +28,16 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss(),
     ],
+    css: {
+      devSourcemap: true,
+      transformer: 'lightningcss',
+      lightningcss: {
+        targets: browserslistToTargets(browserslist('defaults')),
+      },
+    },
+    build: {
+      cssMinify: 'lightningcss',
+    },
   },
 
   eslint: {
