@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "vue.volar",
+    "bradlc.vscode-tailwindcss",
+    "oxc.oxc-vscode",
+    "dbaeumer.vscode-eslint",
+    "antfu.goto-alias",
+    "naumovs.color-highlight"
+  ]
+}
